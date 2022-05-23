@@ -28,24 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnJalali2Miladi = new System.Windows.Forms.Button();
+            this.btnMiladi2Jalali = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnJalali2Miladi
             // 
-            this.button1.Location = new System.Drawing.Point(159, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnJalali2Miladi.Location = new System.Drawing.Point(12, 81);
+            this.btnJalali2Miladi.Name = "btnJalali2Miladi";
+            this.btnJalali2Miladi.Size = new System.Drawing.Size(150, 51);
+            this.btnJalali2Miladi.TabIndex = 0;
+            this.btnJalali2Miladi.Text = "Jalali to Miladi";
+            this.btnJalali2Miladi.UseVisualStyleBackColor = true;
+            this.btnJalali2Miladi.Click += new System.EventHandler(this.btnJalali2Miladi_Click);
+            // 
+            // btnMiladi2Jalali
+            // 
+            this.btnMiladi2Jalali.Location = new System.Drawing.Point(12, 12);
+            this.btnMiladi2Jalali.Name = "btnMiladi2Jalali";
+            this.btnMiladi2Jalali.Size = new System.Drawing.Size(150, 51);
+            this.btnMiladi2Jalali.TabIndex = 1;
+            this.btnMiladi2Jalali.Text = "Miladi to Jalali";
+            this.btnMiladi2Jalali.UseVisualStyleBackColor = true;
+            this.btnMiladi2Jalali.Click += new System.EventHandler(this.btnMiladi2Jalali_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMiladi2Jalali);
+            this.Controls.Add(this.btnJalali2Miladi);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -55,6 +68,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnJalali2Miladi;
+        private Button btnMiladi2Jalali;
     }
 }
