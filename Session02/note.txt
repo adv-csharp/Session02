@@ -1,0 +1,30 @@
+﻿Class Types
+    Normal Class
+        `new`
+    Static Class
+        `new` ❌
+        no counstructor
+        all members must be static
+        only instance
+    Seald Class
+        class dg nemitonan azash ers bebaran
+    Abstract Class
+        `new` ?
+
+    Partial Class
+        class to chandta file mokhtalef tarif mishan
+        baraye codegenerator
+
+    
+
+    Static Class
+        A DataSource
+            desktop (single user) ✔
+            web (muli user) ❌
+        Utitlity
+            Date convert
+            Log
+            unit convert
+        App Config
+           
+    
