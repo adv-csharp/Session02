@@ -30,6 +30,7 @@
         {
             this.btnJalali2Miladi = new System.Windows.Forms.Button();
             this.btnMiladi2Jalali = new System.Windows.Forms.Button();
+            this.btnJalaliMonthName = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJalali2Miladi
@@ -52,11 +53,22 @@
             this.btnMiladi2Jalali.UseVisualStyleBackColor = true;
             this.btnMiladi2Jalali.Click += new System.EventHandler(this.btnMiladi2Jalali_Click);
             // 
+            // btnJalaliMonthName
+            // 
+            this.btnJalaliMonthName.Location = new System.Drawing.Point(168, 12);
+            this.btnJalaliMonthName.Name = "btnJalaliMonthName";
+            this.btnJalaliMonthName.Size = new System.Drawing.Size(150, 51);
+            this.btnJalaliMonthName.TabIndex = 2;
+            this.btnJalaliMonthName.Text = "Jalali Month Name";
+            this.btnJalaliMonthName.UseVisualStyleBackColor = true;
+            this.btnJalaliMonthName.Click += new System.EventHandler(this.btnJalaliMonthName_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnJalaliMonthName);
             this.Controls.Add(this.btnMiladi2Jalali);
             this.Controls.Add(this.btnJalali2Miladi);
             this.Name = "Form1";
@@ -70,5 +82,6 @@
 
         private Button btnJalali2Miladi;
         private Button btnMiladi2Jalali;
+        private Button btnJalaliMonthName;
     }
 }

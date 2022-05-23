@@ -26,5 +26,12 @@ namespace Session02
             MessageBox.Show(result);
 
         }
+
+        private void btnJalaliMonthName_Click(object sender, EventArgs e)
+        {
+            var date = DateTime.Now;
+            var result = DateUtils.GetJalaliMonthName(date);
+            MessageBox.Show(result);
+        }
     }
 }

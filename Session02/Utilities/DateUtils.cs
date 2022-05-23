@@ -10,8 +10,8 @@ namespace Session02.Utilities
     public static class DateUtils
     {
         public static string MiladiToJalali(DateTime date) {
-            var pc = new PersianCalendar();
-            
+            var pc = new PersianCalendar(); // System.Globalization
+
             var year = pc.GetYear(date);
             var month = pc.GetMonth(date);
             var day = pc.GetDayOfMonth(date);
@@ -36,6 +36,62 @@ namespace Session02.Utilities
             result = sb.ToString();
 
             return result;
+        }
+
+        public static string GetJalaliMonthName(DateTime date)
+        {
+            string[] monthNames =
+            {
+                "فروردین",
+                "اردیبهشت",
+                "خرداد",
+                "تیر",
+                "مرداد",
+                "شهریور",
+                "مهر",
+                "آبان",
+                "آذر",
+                "دی",
+                "بهمن",
+                "اسفند"
+            };
+            var pc = new PersianCalendar(); // System.Globalization
+            var month = pc.GetMonth(date);
+
+            //if (month == 1)
+            //    return "فروردین";
+
+
+            return monthNames[month - 1];
+        }
+
+
+        public static string GetJalaliMonthNamePattrenMatching(DateTime date)
+        {
+            var pc = new PersianCalendar(); // System.Globalization
+            var month = pc.GetMonth(date);
+
+            return month switch
+            {
+                1 => "فروردین",
+                2 => "اردیبهشت",
+                3 => "خرداد",
+                4 => "تیر",
+                5 => "مرداد",
+                6 => "شهریور",
+                7 => "مهر",
+                8 => "آبان",
+                9 => "آذر",
+                10 => "دی",
+                11 => "بهمن",
+                12 => "اسفند",
+                _ => "nadarim", // default case
+            };
+        }
+
+        public static string GetJalaliSeasong(DateTime date)
+        {
+            return "بهار";
         }
     }
 }
