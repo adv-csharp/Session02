@@ -1,3 +1,4 @@
+using MD.PersianDateTime.Standard;
 using Session02.Utilities;
 
 namespace Session02
@@ -35,7 +36,11 @@ namespace Session02
 
         private void btnJalaliMonthName_Click(object sender, EventArgs e)
         {
+            var persianDateTime = new PersianDateTime(DateTime.Now);
+
+
             var date = DateTime.Now;
+            
             var result = DateUtils.GetJalaliMonthName(date);
             MessageBox.Show(result);
         }
