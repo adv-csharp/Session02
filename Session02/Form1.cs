@@ -23,7 +23,12 @@ namespace Session02
         private void btnMiladi2Jalali_Click(object sender, EventArgs e)
         {
             var date = DateTime.Now;
-            var result = DateUtils.MiladiToJalali(date);
+            //var result = DateUtils.MiladiToJalali(date);
+
+            //extention method
+            var result = date.ToJalali();
+            
+
             MessageBox.Show(result);
 
         }

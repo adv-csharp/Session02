@@ -38,6 +38,11 @@ namespace Session02.Utilities
             return result;
         }
 
+        /// <summary>
+        /// بر گرداندن فصل جلالی از تاریخ میلادی
+        /// </summary>
+        /// <param name="date">تاریخ میلادی</param>
+        /// <returns>فصل جلالی</returns>
         public static string GetJalaliMonthName(DateTime date)
         {
             string[] monthNames =
@@ -138,6 +143,24 @@ namespace Session02.Utilities
             var day = Convert.ToInt32(parts[2]);
 
             return new DateTime(year, month, day, new PersianCalendar());
+        }
+
+
+        //Extention Method
+        //method static, class static
+        //parameter aval method <this> <Type Morede Nazar>
+        //DateTime -> ToJalali
+        public static string ToJalali(this DateTime date)
+        {
+            var pc = new PersianCalendar(); // System.Globalization
+
+            var year = pc.GetYear(date);
+            var month = pc.GetMonth(date);
+            var day = pc.GetDayOfMonth(date);
+
+            var result = $"{year}/{month}/{day}";
+          
+            return result;
         }
     }
 }
