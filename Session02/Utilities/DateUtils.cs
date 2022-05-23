@@ -133,11 +133,12 @@ namespace Session02.Utilities
             };
         }
 
-
-        public static DateTime JalaliToMiladi(string jalaiDate)
+        //Default Value
+        public static DateTime JalaliToMiladi(string jalaiDate, string seperator = "/")
         {
             //1401/3/2
-            var parts = jalaiDate.Split("/");
+            //1401-3-2
+            var parts = jalaiDate.Split(seperator);
             var year = Convert.ToInt32(parts[0]);
             var month = Convert.ToInt32(parts[1]);
             var day = Convert.ToInt32(parts[2]);
@@ -150,7 +151,7 @@ namespace Session02.Utilities
         //method static, class static
         //parameter aval method <this> <Type Morede Nazar>
         //DateTime -> ToJalali
-        public static string ToJalali(this DateTime date)
+        public static string ToJalali(this DateTime date, string seperator = "/")
         {
             var pc = new PersianCalendar(); // System.Globalization
 
@@ -158,7 +159,7 @@ namespace Session02.Utilities
             var month = pc.GetMonth(date);
             var day = pc.GetDayOfMonth(date);
 
-            var result = $"{year}/{month}/{day}";
+            var result = $"{year}{seperator}{month}{seperator}{day}";
           
             return result;
         }
@@ -198,7 +199,7 @@ namespace Session02.Utilities
 
             var days = Convert.ToInt32(Math.Round(diff.TotalDays));
 
-            return (date.ToJalali(), days);
+            return (date.ToJalali("-"), days);
         }
     }
 
