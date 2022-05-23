@@ -31,6 +31,9 @@
             this.btnJalali2Miladi = new System.Windows.Forms.Button();
             this.btnMiladi2Jalali = new System.Windows.Forms.Button();
             this.btnJalaliMonthName = new System.Windows.Forms.Button();
+            this.btnOutSample = new System.Windows.Forms.Button();
+            this.btnRefSample = new System.Windows.Forms.Button();
+            this.btnTouple = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJalali2Miladi
@@ -63,11 +66,44 @@
             this.btnJalaliMonthName.UseVisualStyleBackColor = true;
             this.btnJalaliMonthName.Click += new System.EventHandler(this.btnJalaliMonthName_Click);
             // 
+            // btnOutSample
+            // 
+            this.btnOutSample.Location = new System.Drawing.Point(638, 12);
+            this.btnOutSample.Name = "btnOutSample";
+            this.btnOutSample.Size = new System.Drawing.Size(150, 51);
+            this.btnOutSample.TabIndex = 3;
+            this.btnOutSample.Text = "Out Sample";
+            this.btnOutSample.UseVisualStyleBackColor = true;
+            this.btnOutSample.Click += new System.EventHandler(this.btnOutSample_Click);
+            // 
+            // btnRefSample
+            // 
+            this.btnRefSample.Location = new System.Drawing.Point(638, 81);
+            this.btnRefSample.Name = "btnRefSample";
+            this.btnRefSample.Size = new System.Drawing.Size(150, 51);
+            this.btnRefSample.TabIndex = 4;
+            this.btnRefSample.Text = "Ref Sample";
+            this.btnRefSample.UseVisualStyleBackColor = true;
+            this.btnRefSample.Click += new System.EventHandler(this.btnRefSample_Click);
+            // 
+            // btnTouple
+            // 
+            this.btnTouple.Location = new System.Drawing.Point(638, 148);
+            this.btnTouple.Name = "btnTouple";
+            this.btnTouple.Size = new System.Drawing.Size(150, 49);
+            this.btnTouple.TabIndex = 5;
+            this.btnTouple.Text = "Touple";
+            this.btnTouple.UseVisualStyleBackColor = true;
+            this.btnTouple.Click += new System.EventHandler(this.btnTouple_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTouple);
+            this.Controls.Add(this.btnRefSample);
+            this.Controls.Add(this.btnOutSample);
             this.Controls.Add(this.btnJalaliMonthName);
             this.Controls.Add(this.btnMiladi2Jalali);
             this.Controls.Add(this.btnJalali2Miladi);
@@ -83,5 +119,8 @@
         private Button btnJalali2Miladi;
         private Button btnMiladi2Jalali;
         private Button btnJalaliMonthName;
+        private Button btnOutSample;
+        private Button btnRefSample;
+        private Button btnTouple;
     }
 }

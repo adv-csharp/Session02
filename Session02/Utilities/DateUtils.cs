@@ -162,5 +162,44 @@ namespace Session02.Utilities
           
             return result;
         }
+
+        public static string ToJalaliAndDays_out(DateTime date, out int days)
+        {
+            /*
+             *  Round 
+             *      10.6 -> 11
+             *      10.4 -> 10
+             *  Ceiling
+             *      10.6 -> 11
+             *      10.4 -> 11
+             *  Floor
+             *      10.6 -> 10
+             *      10.4 -> 10
+             */
+            var diff = DateTime.Now - date;
+
+            days = Convert.ToInt32(Math.Round(diff.TotalDays));
+
+            return date.ToJalali();
+        }
+
+        public static string ToJalaliAndDays_ref(DateTime date, ref int days)
+        {
+            var diff = DateTime.Now - date;
+
+            days = Convert.ToInt32(Math.Round(diff.TotalDays));
+
+            return date.ToJalali();
+        }
+
+        public static (string, int) ToJalaliAndDays_touple(DateTime date)
+        {
+            var diff = DateTime.Now - date;
+
+            var days = Convert.ToInt32(Math.Round(diff.TotalDays));
+
+            return (date.ToJalali(), days);
+        }
     }
+
 }
