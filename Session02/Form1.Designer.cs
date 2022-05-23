@@ -34,6 +34,7 @@
             this.btnOutSample = new System.Windows.Forms.Button();
             this.btnRefSample = new System.Windows.Forms.Button();
             this.btnTouple = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnJalali2Miladi
@@ -96,11 +97,22 @@
             this.btnTouple.UseVisualStyleBackColor = true;
             this.btnTouple.Click += new System.EventHandler(this.btnTouple_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(204, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "♦";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTouple);
             this.Controls.Add(this.btnRefSample);
             this.Controls.Add(this.btnOutSample);
@@ -111,6 +123,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,5 +135,6 @@
         private Button btnOutSample;
         private Button btnRefSample;
         private Button btnTouple;
+        private Label label1;
     }
 }
