@@ -89,9 +89,55 @@ namespace Session02.Utilities
             };
         }
 
-        public static string GetJalaliSeasong(DateTime date)
+        public static string GetJalaliSeasonName(DateTime date)
         {
-            return "بهار";
+            var pc = new PersianCalendar(); // System.Globalization
+            var month = pc.GetMonth(date);
+
+            //switch (month)
+            //{
+            //    case 1:
+            //    case 2:
+            //    case 3: return "بهار";
+            //}
+
+            //return month switch
+            //{
+            //    1 => "بهار",
+            //    2 => "بهار",
+            //    3 => "بهار",
+            //    4 => "تابستان",
+            //    5 => "تابستان",
+            //    6 => "تابستان",
+            //    7 => "پاییز",
+            //    8 => "پاییز",
+            //    9 => "پاییز",
+            //    10 => "زمستان",
+            //    11 => "زمستان",
+            //    12 => "زمستان",
+            //    _ => "nadarim", // default case
+            //};
+
+            return month switch
+            {
+                var m when m <= 3 => "بهار",
+                var m when m <= 6 => "تابستان",
+                var m when m <= 9 => "پاییز",
+                var m when m <= 12 => "زمستان",
+                _ => "nadarim", // default case
+            };
+        }
+
+
+        public static DateTime JalaliToMiladi(string jalaiDate)
+        {
+            //1401/3/2
+            var parts = jalaiDate.Split("/");
+            var year = Convert.ToInt32(parts[0]);
+            var month = Convert.ToInt32(parts[1]);
+            var day = Convert.ToInt32(parts[2]);
+
+            return new DateTime(year, month, day, new PersianCalendar());
         }
     }
 }

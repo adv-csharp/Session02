@@ -16,7 +16,8 @@ namespace Session02
 
         private void btnJalali2Miladi_Click(object sender, EventArgs e)
         {
-
+            var result = DateUtils.JalaliToMiladi("1401/3/2");
+            MessageBox.Show(result.ToLongDateString());
         }
 
         private void btnMiladi2Jalali_Click(object sender, EventArgs e)
